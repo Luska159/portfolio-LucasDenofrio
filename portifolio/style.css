@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital@1&display=swap');
-
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css');
 
 *{
@@ -20,6 +19,7 @@ header{
     height: 100vh;/*Define a altura do elemento*/
     overflow: hidden;
 }
+
 .img-wrapper{
     width: 100%;
     height: 100%;
@@ -34,6 +34,7 @@ header{
     opacity: 0.5;
     animation: zoom 20s;    
 }
+
 @keyframes zoom{
     0%{
         transform: scale(1.3);
@@ -42,11 +43,13 @@ header{
         transform: scale(1);
     }
 }
+
 .banner{
     position: absolute;
     top: 30%;
     left: 10%;
 }
+
 .banner h1{
     color: aliceblue;
     font-size: 3.5rem;
@@ -58,6 +61,7 @@ header{
     margin-bottom: 1rem;
     animation: nomeBanner 2s 0.4s forwards;
 }
+
 @keyframes nomeBanner {
     0%{
         transform: translateY(10rem) rotate(-3deg);
@@ -79,6 +83,7 @@ header{
     opacity: 0;
     animation: nomeBanner 2s 0.7s forwards;
 }
+
 .banner button{
     font-family: var(--font-action);
     font-size: 1.1rem;
@@ -112,8 +117,12 @@ header{
     justify-content: space-evenly;
     cursor: pointer;
 }
+
 .show-menu .hamburguer {
     right: 16rem;
+    z-index: 100;
+    position: absolute;
+
 }
  
 .line {
@@ -127,10 +136,12 @@ header{
 .show-menu #line1 {
    transform: rotate(45deg) translate(.15rem, .45rem);
 }
+
 .show-menu #line2 {
     opacity: 0;
     visibility: hidden;
 }
+
 .show-menu #line3 {
     transform: rotate(-45deg) translate(.1rem, -.55rem);
 }
@@ -138,8 +149,8 @@ header{
 .hamburguer span {
     position: absolute;
     left: 3rem;
-    background: #C02425; 
     color: white;
+    background: #C02425; 
     background: -webkit-linear-gradient(to left, #F0CB35, #C02425);  
     background: linear-gradient(to left, #F0CB35, #C02425);
     height: 2.3rem;
@@ -170,6 +181,7 @@ header{
     position: fixed;
     top: 0;
     right: -20rem;
+    cursor: pointer;
 }
 .show-menu .sidebar { 
     right: 0rem;
@@ -265,6 +277,7 @@ header{
     align-items: center; /*alinhamento vertical*/
     justify-content: center; /*alinhamento horizontal*/
 }
+
 .sessao-conhecimentos {
     background-color: rgba(182, 182, 182, 0.514);
 }
@@ -276,17 +289,20 @@ header{
     border-bottom: solid #C02425 3px;
     margin-bottom: 1.5rem;
 }
+
 .conhecimento-header {
     display: flex;
     align-items: center;
     color: #555555;
 }
+
 .conhecimento-header i {
     font-size: 2.5rem;
 }
+
 .conhecimento-header h3 {
     font-family: var(--font-secondary);
-    font-size: 1rem;
+    font-size: 2rem;
     padding-left: 1rem;
 }
 .conhecimento-text {
@@ -302,5 +318,314 @@ header{
 .conhecimentos .conhecimentos-img-wrapper img {
     object-fit: cover;
     width: 90%;
+}
 
+/*SESSÃO DE PROJETOS*/
+
+.projetos {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card {
+    width: 18rem;
+    height: 25rem;
+    position: relative;
+    margin-bottom: 2rem;
+    z-index: 1;
+}
+
+.card-img-wrapper {
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    background-color: rgb(54, 54, 54);
+}
+
+.card-img-wrapper img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    border-radius: .5rem;
+    opacity: .9;
+    transition: opacity .3s;
+    z-index: 1;
+}
+
+.card:hover .card-img-wrapper img {
+    opacity: .5;
+}
+
+.card-info {
+    position: absolute;
+    padding: 2rem;
+    bottom: -1rem;
+    visibility: hidden;
+    opacity: 0;
+    z-index: 1;
+    text-shadow: 0.3rem 0.2rem 0.3rem rgba(0,0,0,.6);
+    transition: all .3s; 
+}
+
+.card-info h2 {
+    font-family: var(--font-secondary);
+    font-size: 2rem;
+    font-weight: 500;
+    color: #e2dfdf;
+    margin-bottom: .5rem;
+}
+
+.card-info h3 {
+    font-family: var(--font-action);
+    font-weight: bolder;
+    color: #C02425;
+    margin-bottom: .5rem;
+}
+
+.card-info p {
+    font-family: var(--font-secondary);
+    color: #eee;
+    width: 80%;
+    margin-bottom: .5rem;
+}
+
+.card-info button {
+    width: 8rem;
+    height: 2.5rem;
+    background: #C02425; 
+    background: -webkit-linear-gradient(to left, #F0CB35, #C02425);  
+    background: linear-gradient(to left, #F0CB35, #C02425);
+    font-family: var(--font-action);
+    color: #eee;
+    border-radius: .5rem;
+    border: none;
+    box-shadow: 0rem .1rem .8rem rgba(0,0,0,.4);
+}
+
+.card:hover .card-info {
+    bottom: 2rem;
+    opacity: 1;
+    visibility: visible;
+}
+
+/*ORÇAMENTO*/
+
+.sessao-contato {
+    width: 100%;
+    height: 100vh;
+    background-color: #272727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contato-wrapper {
+    width: 60%;
+    height: 30rem;
+    display: flex;
+    box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.384);
+}
+
+.contato-left {
+    width: 35%;
+    background: linear-gradient(rgba(15,15,15,.6), rgba(22,22,22,0.9)), url(Imagens/contatoPortifolio.jpg);
+    background-size: cover;
+}
+
+.contato-right {
+    width: 65%;
+    background-color: #eee;
+    padding: 1rem 3rem 3rem 3rem;
+}
+
+.sessao-contato h1 {
+    font-family: var(--font-primary);
+    color: #272727;
+    font-size: 3rem;
+    font-weight: lighter;
+    text-align: center;
+}
+
+.sessao-contato form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    position: relative;
+}
+
+.input-group textarea {
+    padding-top: 1rem;
+    max-width: 30rem;
+    max-height: 3;
+}
+
+.field {
+    background: transparent;
+    border: none;
+    width: 20rem;
+    height: 2.5rem;
+    font-size: 1.5rem;
+    font-family: var(--font-secondary);
+    border-bottom: 2px dashed #636363;
+    outline: none;
+    margin: 2rem 0;
+}
+
+.field-label {
+    position: absolute;
+    left: 0;
+    top: 1rem;
+    font-size: 1.2rem;
+    font-family: var(--font-action);
+    text-transform: uppercase;
+    transition: all 0.4s;
+}
+
+.field:focus ~ label {
+    top: 0;
+    font-size: 1rem;
+}
+
+.field:focus {
+    border-bottom: solid 2px;
+}
+
+.btn-submit {
+    width: 100%;
+    height: 2rem;
+    background: #C02425; 
+    background: -webkit-linear-gradient(to left, #F0CB35, #C02425);  
+    background: linear-gradient(to left, #F0CB35, #C02425);
+    font-family: var(--font-action);
+    font-family: var(--font-primary);
+    color: #eee;
+    margin: 0px auto;
+    border-radius: .2rem;
+    border: none;
+    box-shadow: 0rem .1rem .8rem rgba(0,0,0,.4);   
+}
+
+/*FORMULÁRIO*/
+
+.sessao-orcamento {
+    width: 100%;
+    height: 100vh;
+    background: url(Imagens/orcamento.jpg);
+    object-fit: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.orcamento-wrapper {
+    width: 69%;
+    height: 80%;
+    background: #ffffff;
+    opacity: .8;
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    position: relative;
+}
+
+.sessao-orcamento h1 {
+    position: absolute;
+    top: -2.5rem;
+    left: 2rem;
+    background: #C02425; 
+    background: -webkit-linear-gradient(to left, #F0CB35, #C02425);  
+    background: linear-gradient(to left, #F0CB35, #C02425);
+    box-shadow: 0 0.1rem 0.3rem rgba(0, 0, 0, 0.5);
+    border-radius: .1rem;
+    color: #ffffff;
+    font-family: var(--font-primary);
+    font-size: 3rem;
+    padding: 0 .5rem;
+}
+
+.sessao-orcamento form {
+    margin: 4rem;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    grid-template-columns: auto 1fr;
+    column-gap: 2rem;
+    row-gap: 2rem;
+}
+
+.sessao-orcamento label {
+    font-family: var(--font-action);
+    font-size: 1.3rem;
+}
+
+.sessao-orcamento input[type="number"] {
+    font-family: var(--font-action);
+    width: 4rem;
+    font-size: 2rem;
+    padding: 2px 20px;
+}
+
+.btn-orcamento {
+    font-family: var(--font-primary);
+    font-size: 1.2rem;
+    opacity: .8;
+    color: #ffffff;
+    text-transform: uppercase;
+    padding: 1rem;
+    cursor: pointer;
+    background: #C02425; 
+    background: -webkit-linear-gradient(to left, #F0CB35, #C02425);  
+    background: linear-gradient(to left, #F0CB35, #C02425);
+    border: none;
+    border-radius: .1rem;
+    grid-column: 2;
+}
+
+.btn-orcamento:hover {
+    opacity: 1;
+}
+
+/*RODAPÉ*/
+
+footer {
+    width: 100%;
+    height: 7rem;
+    background-color: #17181b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-content {
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-content p {
+    font-family: var(--font-primary);
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin: auto 0;
+    
+}
+
+.link-footer i {
+    color: #ffffff;
+    font-size: 2rem;    
+    transition: color 1s; 
+}
+
+.social-list a {
+    margin: 0 2rem;
+}
+
+.link-footer i:hover {
+    color: #d4d3d3;
+}
+
+.social-list ul {
+    display: flex;
+    margin-left: 2rem;
 }
