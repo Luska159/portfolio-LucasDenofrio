@@ -24,7 +24,7 @@
             <div class="line" id="line3"></div>
             <span>Fechar</span>
         </div>
-        <header>
+        <header id="home">
             <div class="img-wrapper">
                 <img src="Imagens/dev2.jpg" alt="dev">
             </div>
@@ -38,11 +38,11 @@
         <aside class="sidebar">
             <nav>
                 <ul class="menu">
-                    <li class="menu-item"><a href="#" class="menu-link">Home</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Conhecimentos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Projetos</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Contato</a></li>
-                    <li class="menu-item"><a href="#" class="menu-link">Orçamento</a></li>
+                    <li class="menu-item"><a href="#home" class="menu-link">Home</a></li>
+                    <li class="menu-item"><a href="#conhecimentos" class="menu-link">Conhecimentos</a></li>
+                    <li class="menu-item"><a href="#projetos" class="menu-link">Projetos</a></li>
+                    <li class="menu-item"><a href="#contato" class="menu-link">Contato</a></li>
+                    <li class="menu-item"><a href="#orcamento" class="menu-link">Orçamento</a></li>
                 </ul>
             </nav>
 
@@ -53,7 +53,7 @@
             </div>
         </aside>
 
-        <section class="sessao-conhecimentos">
+        <section class="sessao-conhecimentos" id="conhecimentos">
             <div class="sessao-header">
                 <h1>Conhecimentos</h1>
             </div>
@@ -131,7 +131,7 @@
     </div>
     </section>
 
-    <section class="sessao-projetos">
+    <section class="sessao-projetos" id="projetos">
         <div class="sessao-header">
             <h1>Projetos</h1>
         </div>
@@ -171,7 +171,7 @@
             </div>
         </div>
     </section>
-    <section class="sessao-contato">
+    <section class="sessao-contato" id="contato">
         <div class="contato-wrapper">
             <div class="contato-left"></div>
             <div class="contato-right">
@@ -194,7 +194,7 @@
             </div>
         </div>
     </section>
-    <section class="sessao-orcamento">
+    <section class="sessao-orcamento" id="orcamento">
         <div class="orcamento-wrapper">
             <h1>Faça seu orçamento</h1>
             <form>
@@ -214,7 +214,8 @@
                     </div>
                 </div>
                 <label for="prazo">Prazo</label>
-                <input type="range" name="prazo" id="prazo">
+                <input type="range" name="prazo" id="prazo" min="1" max="10">
+                <label id="preco">R$ 0,00</label>
                 <button class="btn btn-orcamento" type="submit">Enviar</button>
             </form>
         </div>
@@ -226,13 +227,15 @@
             </p>
             <div class="social-list">
                 <ul>
-                <li class="link-footer"><a href="#"><i class="fab fa-instagram "></i></a></li>
-                <li class="link-footer"><a href="#"><i class="fab fa-facebook"></i></a></li>
-                <li class="link-footer"><a href="#"><i class="fab fa-github"></i></a></li>
+                    <li class="link-footer"><a href="#"><i class="fab fa-instagram "></i></a></li>
+                    <li class="link-footer"><a href="#"><i class="fab fa-facebook"></i></a></li>
+                    <li class="link-footer"><a href="#"><i class="fab fa-github"></i></a></li>
                 </ul>
             </div>
         </div>
     </footer>
+    <a href="#home" id="link-topo"><i class="fas fa-arrow-up"></i></a>
+
     </div>
 </body>
 <script src="portifolio.js"></script>
